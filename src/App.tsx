@@ -29,12 +29,14 @@ function App() {
                 <SignTransactionsModals />
 
                 <NavBar />
-                <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/unlock" element={<UnlockPage />} />
-                    <Route path="/create" element={<CreateOfferPage />} />
-                    <Route path="/deploy" element={<DeploymentPage />} />
-                </Routes>
+                <div className="bg-neutral-100">
+                    <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/unlock" element={<UnlockPage />} />
+                        <Route path="/create" element={<CreateOfferPage />} />
+                        <Route path="/deploy" element={<DeploymentPage />} />
+                    </Routes>
+                </div>
             </Router>
         </DappProvider>
     )
