@@ -21,8 +21,17 @@ export const NavBar = () => {
             <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                 <div className="text-sm lg:flex-grow">
                     <Link className={`block mt-4 lg:inline-block lg:mt-0 text-stone-200 hover:text-white mr-4 ${activePage === "/" ? "active" : ""}`} to="/">Home</Link>
-                    <Link className={`block mt-4 lg:inline-block lg:mt-0 text-stone-200 hover:text-white mr-4 ${activePage === "/unlock" ? "active" : ""}`} to="/unlock">Unlock</Link>
-                    <Link className={`block mt-4 lg:inline-block lg:mt-0 text-stone-200 hover:text-white mr-4 ${activePage === "/create" ? "active" : ""}`} to="/create">Create</Link>
+                    {
+                        !isLoggedIn && <Link className={`block mt-4 lg:inline-block lg:mt-0 text-stone-200 hover:text-white mr-4 ${activePage === "/unlock" ? "active" : ""}`} to="/unlock">Unlock</Link>
+                    }
+                    {
+                        isLoggedIn && (
+                            <>
+                                <Link className={`block mt-4 lg:inline-block lg:mt-0 text-stone-200 hover:text-white mr-4 ${activePage === "/create" ? "active" : ""}`} to="/create">Create</Link>
+                                <Link className={`block mt-4 lg:inline-block lg:mt-0 text-stone-200 hover:text-white mr-4 ${activePage === "/deploy" ? "active" : ""}`} to="/deploy">Deployment</Link>
+                            </>
+                        )
+                    }
                 </div>
                 <div>
                     {
