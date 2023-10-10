@@ -1,3 +1,6 @@
+### No longer maintained. Adopted by @multiversx.
+#### Check out the new repo at https://github.com/multiversx/mx-nft-escrow-dapp
+
 # MultiversX template dApp with React + TypeScript + Vite
 ## Uses a sample of [NFT escrow contract](https://github.com/multiversx/mx-contracts-rs/tree/main/contracts/nft-escrow)
 
